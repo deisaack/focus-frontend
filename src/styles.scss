@@ -3,28 +3,14 @@
 
 @import 'assets/variables';
 @import 'assets/core';
-
+@import '../node_modules/font-awesome/scss/font-awesome';
 .loading {
-  padding: 1em;
-}
-
-demo {
-  height: 100%;
-  width: 100%;
-}
-
-.demo-header {
-  align-items: center;
-  background: $brand;
-  box-shadow: 0 0.1em 1.5em rgba($dark-grey, 0.5);
-  color: $white;
-  display: flex;
   padding: 1em;
 }
 
 .demo-header__toggle {
   background: transparent;
-  border: 0.15rem solid $white;
+  border: 0.15rem solid $white-scheme;
   border-left: 0;
   border-right: 0;
   cursor: pointer;
@@ -35,7 +21,7 @@ demo {
   width: 2rem;
 
   &::after {
-    background: $white;
+    background: $white-scheme;
     content: '';
     height: 0.15rem;
     left: 0;
@@ -55,20 +41,25 @@ demo {
   }
 }
 
-.demo-contents {
-  padding: 0 2em;
-}
-
 .demo-control {
-  background-color: $light-grey;
-  border: 1px solid $dark-grey;
+  background-color: $light-grey-scheme;
+  border: 1px solid $dark-grey-scheme;
   cursor: pointer;
   margin-bottom: 0.5em;
   padding: 0.5em 2em;
   transition: background-color 0.15s;
 
   &:hover {
-    background-color: $dark-grey;
-    color: $white;
+    background-color: $dark-grey-scheme;
+    color: $white-scheme;
   }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
 }

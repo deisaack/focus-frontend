@@ -3,27 +3,23 @@
 @import '../assets/variables';
 @import '../assets/core';
 
-.loading {
-  padding: 1em;
-}
-
-demo {
+body {
   height: 100%;
   width: 100%;
 }
 
-.demo-header {
+header {
   align-items: center;
-  background: $brand;
-  box-shadow: 0 0.1em 1.5em rgba($dark-grey, 0.5);
-  color: $white;
+  background: $color-scheme;
+  box-shadow: 0 0.1em 1.5em rgba($dark-grey-scheme, 0.5);
+  color: $white-scheme;
   display: flex;
   padding: 1em;
 }
 
 .demo-header__toggle {
   background: transparent;
-  border: 0.15rem solid $white;
+  border: 0.15rem solid white;
   border-left: 0;
   border-right: 0;
   cursor: pointer;
@@ -34,7 +30,7 @@ demo {
   width: 2rem;
 
 &::after {
-   background: $white;
+   background: white;
    content: '';
    height: 0.15rem;
    left: 0;
@@ -54,20 +50,20 @@ demo {
  }
 }
 
-.demo-contents {
-  padding: 0 2em;
-}
-
 .demo-control {
-  background-color: $light-grey;
-  border: 1px solid $dark-grey;
+  background-color: lightgray;
+  border: 1px solid darkgray;
   cursor: pointer;
   margin-bottom: 0.5em;
   padding: 0.5em 2em;
   transition: background-color 0.15s;
 
 &:hover {
-   background-color: $dark-grey;
-   color: $white;
+   background-color: darkgray;
+   color: white;
  }
+}
+
+.auth {
+  margin-top: 100px;
 }
