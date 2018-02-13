@@ -3,7 +3,7 @@
   <div class="card card-body mb-0 rounded-0 p-5 col-sm-12 col-md-6 col-lg-4">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <img src="assets/img/logo.jpg" class="avatar-xs mb-1" alt="">
+        <img src="assets/logo.png" class="avatar-xs mb-1" alt="">
         <p class="ff-headers text-uppercase">Create an account</p>
       </div>
       <fieldset class="form-group" [ngClass]="{'has-danger': form.controls['username'].hasError('required') && form.controls['username'].touched} || usernameExists">
@@ -17,7 +17,9 @@
         <div class="alert alert-danger alert-dismissible" *ngIf="form.controls['username'].hasError('required') && form.controls['username'].touched">Username is required.</div>
         <div class="alert alert-danger alert-dismissible" *ngIf="usernameExists">This Username is already taken</div>
         <div *ngIf="postResp.username">
-          <div class="alert alert-danger alert-dismissible" *ngFor="let error of postResp.username">{{error}}</div>
+          <div *ngIf="postResp.username.length !== 0">
+            <div class="alert alert-danger alert-dismissible" *ngFor="let error of postResp.username">{{error}}</div>
+          </div>
         </div>
       </fieldset>
       <fieldset class="form-group" [ngClass]="{'has-danger': form.controls['email'].hasError('required') && form.controls['email'].touched} || emailExists">

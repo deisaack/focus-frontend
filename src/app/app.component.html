@@ -16,18 +16,28 @@
     [autoFocus]="true"
     [sidebarClass]="'demo-sidebar'"
     [ariaLabel]="'Quick Links'">
-    <p>Sidebar contents</p>
-
-    <button class="demo-control" (click)="_toggleOpened()">Close sidebar</button>
-    <p><a closeSidebar>This will close the sidebar too</a></p>
+    <!--<button class="demo-control" (click)="_toggleOpened()">Close sidebar</button>-->
+    <img src="../assets/img/logo.jpg" alt="" height="100px" width="200px">
 
     <hr>
 
-    <p>Throwup on your pillow.</p>
-    <p>Steal the warm chair right after you get up.</p>
-    <p>Use lap as chair hide head under blanket.</p>
-    <p>Walk on car leaving trail of paw prints on hood.</p>
-    <p>Steal the warm chair right after you get up.</p>
+    <aside class="rightbar" id="rightMenu">
+
+      <ul>
+        <li><a href="/dashboard">Dashboard<i class="fa fa-tachometer"></i></a></li>
+        <li><a href="/profile">Profile<i class="fa fa-pencil-square-o"></i></a></li>
+        <li><a href="/file/2">File Detail<i class="fa fa-list"></i></a></li>
+        <li class="tools-menu">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#rightMenu" href="#collapseFour">
+            Auth<i class="fa fa-file-text"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
   </ng-sidebar>
 
   <div ng-sidebar-content>
@@ -40,9 +50,6 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Profile</a>
-            </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -52,44 +59,46 @@
       </nav>
 
     <section>
+    <router-outlet>
 
+    </router-outlet>
 
-      <div class="col-sm-8 col-md-4 card offset-md-4 offset-sm-2 auth">
-        <div class="card-header ">
-          Example Form
-        </div>
-        <div class="card-body ">
-          <form action=" " method="post ">
-            <div class="form-group ">
-              <div class="input-group ">
-                <input type="text " id="username2 " name="username2 " class="form-control " placeholder="Username ">
-                <div class="input-group-append ">
-                  <span class="input-group-text "><i class="fa fa-user "></i></span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group ">
-              <div class="input-group ">
-                <input type="email " id="email2 " name="email2 " class="form-control " placeholder="Email ">
-                <div class="input-group-append ">
-                  <span class="input-group-text "><i class="fa fa-envelope "></i></span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group ">
-              <div class="input-group ">
-                <input type="password " id="password2 " name="password2 " class="form-control " placeholder="Password ">
-                <div class="input-group-append ">
-                  <span class="input-group-text "><i class="fa fa-asterisk "></i></span>
-                </div>
-              </div>
-            </div>
-            <div class="form-group form-actions ">
-              <button type="submit " class="btn btn-sm btn-secondary ">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <!--<div class="col-sm-8 col-md-4 card offset-md-4 offset-sm-2 auth">-->
+        <!--<div class="card-header ">-->
+          <!--Example Form-->
+        <!--</div>-->
+        <!--<div class="card-body ">-->
+          <!--<form action=" " method="post ">-->
+            <!--<div class="form-group ">-->
+              <!--<div class="input-group ">-->
+                <!--<input type="text " id="username2 " name="username2 " class="form-control " placeholder="Username ">-->
+                <!--<div class="input-group-append ">-->
+                  <!--<span class="input-group-text "><i class="fa fa-user "></i></span>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group ">-->
+              <!--<div class="input-group ">-->
+                <!--<input type="email " id="email2 " name="email2 " class="form-control " placeholder="Email ">-->
+                <!--<div class="input-group-append ">-->
+                  <!--<span class="input-group-text "><i class="fa fa-envelope "></i></span>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group ">-->
+              <!--<div class="input-group ">-->
+                <!--<input type="password " id="password2 " name="password2 " class="form-control " placeholder="Password ">-->
+                <!--<div class="input-group-append ">-->
+                  <!--<span class="input-group-text "><i class="fa fa-asterisk "></i></span>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="form-group form-actions ">-->
+              <!--<button type="submit " class="btn btn-sm btn-secondary ">Submit</button>-->
+            <!--</div>-->
+          <!--</form>-->
+        <!--</div>-->
+      <!--</div>-->
     </section>
   </div>
 </ng-sidebar-container>

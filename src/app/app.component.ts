@@ -7,6 +7,7 @@ import { Component, AnimationTransitionEvent } from '@angular/core';
 })
 export class AppComponent {
   private _opened = false;
+  public noneStyle = false;
   private _toggleOpened(): void {
     this._opened = !this._opened;
   }
